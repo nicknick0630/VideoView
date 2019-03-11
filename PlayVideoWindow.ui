@@ -1,0 +1,233 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>PlayVideoWindow</class>
+ <widget class="QDialog" name="PlayVideoWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>600</width>
+    <height>500</height>
+   </rect>
+  </property>
+  <property name="minimumSize">
+   <size>
+    <width>600</width>
+    <height>500</height>
+   </size>
+  </property>
+  <property name="windowTitle">
+   <string>PlayVideoWindow</string>
+  </property>
+  <widget class="QPushButton" name="chose_images">
+   <property name="geometry">
+    <rect>
+     <x>10</x>
+     <y>20</y>
+     <width>85</width>
+     <height>26</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>選擇影像</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="play_button">
+   <property name="geometry">
+    <rect>
+     <x>210</x>
+     <y>400</y>
+     <width>52</width>
+     <height>52</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background-image: url(:/play/Resources/play.png);</string>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+   <property name="autoDefault">
+    <bool>false</bool>
+   </property>
+   <property name="flat">
+    <bool>true</bool>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="stop_button">
+   <property name="geometry">
+    <rect>
+     <x>310</x>
+     <y>400</y>
+     <width>52</width>
+     <height>52</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background-image: url(:/play/Resources/stop.png);</string>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+   <property name="autoDefault">
+    <bool>false</bool>
+   </property>
+   <property name="flat">
+    <bool>true</bool>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="next_button">
+   <property name="geometry">
+    <rect>
+     <x>110</x>
+     <y>400</y>
+     <width>52</width>
+     <height>52</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background-image: url(:/play/Resources/next.png);</string>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+   <property name="autoDefault">
+    <bool>false</bool>
+   </property>
+   <property name="flat">
+    <bool>true</bool>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="back_button">
+   <property name="geometry">
+    <rect>
+     <x>410</x>
+     <y>400</y>
+     <width>52</width>
+     <height>52</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background-image: url(:/play/Resources/back.png);</string>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+   <property name="autoDefault">
+    <bool>false</bool>
+   </property>
+   <property name="flat">
+    <bool>true</bool>
+   </property>
+  </widget>
+  <widget class="QLabel" name="index_label">
+   <property name="geometry">
+    <rect>
+     <x>20</x>
+     <y>90</y>
+     <width>81</width>
+     <height>41</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignCenter</set>
+   </property>
+  </widget>
+ </widget>
+ <layoutdefault spacing="6" margin="11"/>
+ <resources>
+  <include location="PlayIcons.qrc"/>
+ </resources>
+ <connections>
+  <connection>
+   <sender>chose_images</sender>
+   <signal>clicked()</signal>
+   <receiver>PlayVideoWindow</receiver>
+   <slot>openVideoSequence_slot()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>66</x>
+     <y>30</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>144</x>
+     <y>628</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>play_button</sender>
+   <signal>clicked()</signal>
+   <receiver>PlayVideoWindow</receiver>
+   <slot>playButtonAction_slot()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>226</x>
+     <y>423</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>263</x>
+     <y>641</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>stop_button</sender>
+   <signal>clicked()</signal>
+   <receiver>PlayVideoWindow</receiver>
+   <slot>stopButtonAction_slot()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>330</x>
+     <y>428</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>356</x>
+     <y>595</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>next_button</sender>
+   <signal>clicked()</signal>
+   <receiver>PlayVideoWindow</receiver>
+   <slot>nextButtonAction_slot()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>144</x>
+     <y>446</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>123</x>
+     <y>654</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>back_button</sender>
+   <signal>clicked()</signal>
+   <receiver>PlayVideoWindow</receiver>
+   <slot>backButtonAction_slot()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>431</x>
+     <y>423</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>457</x>
+     <y>532</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
+ <slots>
+  <slot>openVideoSequence_slot()</slot>
+  <slot>playButtonAction_slot()</slot>
+  <slot>stopButtonAction_slot()</slot>
+  <slot>nextButtonAction_slot()</slot>
+  <slot>backButtonAction_slot()</slot>
+ </slots>
+</ui>

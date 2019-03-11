@@ -1,0 +1,275 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>CompressWindow</class>
+ <widget class="QDialog" name="CompressWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>900</width>
+    <height>800</height>
+   </rect>
+  </property>
+  <property name="minimumSize">
+   <size>
+    <width>900</width>
+    <height>800</height>
+   </size>
+  </property>
+  <property name="windowTitle">
+   <string>CompressWindow</string>
+  </property>
+  <widget class="QPushButton" name="choose_imagesbutton">
+   <property name="geometry">
+    <rect>
+     <x>580</x>
+     <y>510</y>
+     <width>91</width>
+     <height>41</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>選擇影像</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="start_button">
+   <property name="geometry">
+    <rect>
+     <x>580</x>
+     <y>610</y>
+     <width>91</width>
+     <height>61</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>開始壓縮</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="pushButton">
+   <property name="geometry">
+    <rect>
+     <x>580</x>
+     <y>720</y>
+     <width>91</width>
+     <height>41</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>暫停</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="pushButton_2">
+   <property name="geometry">
+    <rect>
+     <x>760</x>
+     <y>720</y>
+     <width>91</width>
+     <height>41</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>繼續</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="pre_img_label">
+   <property name="geometry">
+    <rect>
+     <x>90</x>
+     <y>40</y>
+     <width>81</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">font-size: 18px;
+color: red;</string>
+   </property>
+   <property name="text">
+    <string>比對圖片</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="pre_img_label_2">
+   <property name="geometry">
+    <rect>
+     <x>620</x>
+     <y>40</y>
+     <width>81</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">font-size: 18px;
+color: red;</string>
+   </property>
+   <property name="text">
+    <string>編碼圖片</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="pre_idx_label">
+   <property name="geometry">
+    <rect>
+     <x>210</x>
+     <y>43</y>
+     <width>91</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">font-size: 18px;</string>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+  </widget>
+  <widget class="QLabel" name="now_idx_label">
+   <property name="geometry">
+    <rect>
+     <x>740</x>
+     <y>40</y>
+     <width>91</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">font-size: 18px;</string>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+  </widget>
+  <widget class="QComboBox" name="comboBox">
+   <property name="geometry">
+    <rect>
+     <x>690</x>
+     <y>630</y>
+     <width>201</width>
+     <height>21</height>
+    </rect>
+   </property>
+   <item>
+    <property name="text">
+     <string>Exhausted Search</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>Exhausted Search Quick</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>TDL Search</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>TSS Search</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>CSA Search</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>EH Search (no display)</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>EH Search Quick (no display)</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>TDL Search (no display)</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>TSS Search (no display)</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>CSA Search (no display)</string>
+    </property>
+   </item>
+  </widget>
+ </widget>
+ <layoutdefault spacing="6" margin="11"/>
+ <resources/>
+ <connections>
+  <connection>
+   <sender>choose_imagesbutton</sender>
+   <signal>clicked()</signal>
+   <receiver>CompressWindow</receiver>
+   <slot>openVideoSequence_slot()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>610</x>
+     <y>519</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>899</x>
+     <y>546</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>start_button</sender>
+   <signal>clicked()</signal>
+   <receiver>CompressWindow</receiver>
+   <slot>startCompressButton_slot()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>776</x>
+     <y>523</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>936</x>
+     <y>510</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>pushButton</sender>
+   <signal>clicked()</signal>
+   <receiver>CompressWindow</receiver>
+   <slot>stopButton_slot()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>638</x>
+     <y>652</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>651</x>
+     <y>846</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>pushButton_2</sender>
+   <signal>clicked()</signal>
+   <receiver>CompressWindow</receiver>
+   <slot>continueButton_slot()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>791</x>
+     <y>637</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>799</x>
+     <y>836</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
+ <slots>
+  <slot>openVideoSequence_slot()</slot>
+  <slot>startCompressButton_slot()</slot>
+  <slot>stopButton_slot()</slot>
+  <slot>continueButton_slot()</slot>
+ </slots>
+</ui>
